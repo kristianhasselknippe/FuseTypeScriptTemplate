@@ -2,7 +2,7 @@
 - Latest version of Fuse: www.fusetools.com
 - NodeJS/NPM: https://nodejs.org/en/
 - TypeScript: https://www.TypeScriptlang.org/#download-links
-  - If you have NPM: ~npm install -g TypeScript~
+  - If you have NPM: ~npm install -g typescript~
 
 * Building
 - Run the TypeScript compiler:
