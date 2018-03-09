@@ -1,0 +1,28 @@
+<App Model="dist/App">
+	<DockPanel>
+		<Panel Padding="10" Dock="Top">
+			<Text Value="{aFieldWithText}" Alignment="Center" FontSize="24"/>
+		</Panel>
+		<Grid ColumnCount="2">
+			<StackPanel>
+				<Each Items="{andSomeNumbers}">
+					<Text Value="{data()}" Alignment="Center"/>
+				</Each>
+			</StackPanel>
+			<StackPanel>
+				<Each Items="{aDerivedListUsingGetter}">
+					<Text Value="{data()}" Alignment="Center"/>
+				</Each>
+			</StackPanel>
+		</Grid>
+		<DockPanel Color="#ddd" Dock="Bottom" Height="60" Padding="10,0">
+			<TextInput Value="{input}" InputHint="Number" Background="#fff" Margin="10" />
+			<Button Text="Add" Dock="Right" Clicked="{addNumber}"/>
+		</DockPanel>
+		<WhileFalse Value="{inputIsValid}">
+			<Panel Padding="10" Dock="Bottom">
+				<Text Value="Input is invalid, expecting a number" />
+			</Panel>
+		</WhileFalse>
+	</DockPanel>
+</App>
